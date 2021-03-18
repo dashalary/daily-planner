@@ -17,5 +17,31 @@ function Provider(props) {
         fetchData()
     }, [])
 
+    const addTask = (description, complete) => {
+        const task = {
+            description: description,
+            complete: complete
+        }
+        fetch('/tasks', {
+            method: 'POST',
+            body: JSON.stringify(task),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(res => res.json())
+        .then(data => {
+            setTasks([...tasks, data])
+        })
+    }  
     
+    return <MyContext.Provider value={{
+        tasks: tasks,
+        addTask: addTask
+        }}>
+        {props.children}
+        </MyContext.Provider>
 }
+
+const MyConsumer = MyContext.Consumer
+export { MyProvider, MyConsumer }
