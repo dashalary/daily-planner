@@ -5,12 +5,12 @@ export default MyContext
 
 /* now we need to make context available to all components via provider */
 
-function Provider(props) {
+function MyProvider(props) {
     const [tasks, setTasks] = useState([])
 
     useEffect(() => {
-        const fetchData = async() => {
-            const res = await fetch('/tasks')
+        const fetchData = async () => {
+            const res = await fetch('http://localhost:3333/tasks')
             const data = await res.json()
             setTasks(data)
         }
@@ -36,11 +36,12 @@ function Provider(props) {
     }  
     
     return <MyContext.Provider value={{
-        tasks: tasks,
-        addTask: addTask
+            tasks: tasks,
+            addTask: addTask
         }}>
-        {props.children}
+            {props.children}
         </MyContext.Provider>
+    
 }
 
 const MyConsumer = MyContext.Consumer
