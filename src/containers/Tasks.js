@@ -1,5 +1,5 @@
 import React from 'react';
-import MyContext from '../MyContext'
+import MyContext from '../context/MyContext'
 
 function Tasks() {
     return (
@@ -21,3 +21,4 @@ function Tasks() {
     )
 }
 
+export default Tasks()
