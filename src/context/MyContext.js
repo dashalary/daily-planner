@@ -22,7 +22,7 @@ function MyProvider(props) {
             description: description,
             complete: complete
         }
-        fetch('/tasks', {
+        fetch('http://localhost:3333/tasks', {
             method: 'POST',
             body: JSON.stringify(task),
             headers: {

@@ -7,7 +7,7 @@ function Tasks() {
         <MyContext.Consumer>
         {context => {
             console.log("Rendering")
-            const tasks = context.tasks.map(task => <li key={task.task}>{task.task}</li>);
+            const tasks = context.tasks.map(task => <li key={task.description}>{task.description}</li>);
             return (
                 <div className="App">
                     <h1>Create a Task</h1>
