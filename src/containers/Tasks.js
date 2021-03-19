@@ -12,6 +12,7 @@ function Tasks() {
                     <h1>Create a Task</h1>
                     <hr />
                     <h1>Today's Tasks</h1>
+                    <br></br>
                     <ul>
                     {tasks}
                     </ul>
