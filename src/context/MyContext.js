@@ -35,7 +35,9 @@ function MyProvider(props) {
         })
     }  
 
-    const deleteTask = 
+    const deleteTask = (id) => {
+
+    }
     
     return <MyContext.Provider value={{
             tasks: tasks,
