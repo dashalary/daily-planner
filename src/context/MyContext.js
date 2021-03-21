@@ -34,10 +34,13 @@ function MyProvider(props) {
             setTasks([...tasks, data])
         })
     }  
+
+    const deleteTask = 
     
     return <MyContext.Provider value={{
             tasks: tasks,
-            addTask: addTask
+            addTask: addTask,
+            deleteTask: deleteTask
         }}>
             {props.children}
         </MyContext.Provider>
