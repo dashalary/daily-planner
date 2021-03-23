@@ -14,11 +14,6 @@
       "description": "stretch",
       "complete": false,
       "id": 3
-    },
-    {
-      "description": "go to the gym",
-      "complete": false,
-      "id": 4
     }
   ]
 }
