@@ -31,13 +31,23 @@ function MyProvider(props) {
         })
         .then(res => res.json())
         .then(data => {
-            const newTasks = tasks.filter(t => `${t.id}` !== id) // in case of different datatypes (string and int)
             setTasks([...tasks, data])
         })
     }  
 
     const deleteTask = (id) => {
-
+        fetch('http://localhost:3333/tasks', {
+            method: 'DELETE',
+            body: JSON.stringify(task),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(res => res.json())
+        .then(data => {
+            const newTasks = tasks.filter(t => `${t.id}` !== id) // in case of different datatypes (string and int)
+            setTasks([...tasks, data])
+        })
     }
     
     return <MyContext.Provider value={{
