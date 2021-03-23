@@ -36,17 +36,16 @@ function MyProvider(props) {
     }  
 
     const deleteTask = (id) => {
-        fetch('http://localhost:3333/tasks', {
+        fetch(`http://localhost:3333/tasks/${id}`, {
             method: 'DELETE',
-            body: JSON.stringify(task),
             headers: {
                 'Content-Type': 'application/json'
             }
         })
         .then(res => res.json())
-        .then(data => {
+        .then(() => {
             const newTasks = tasks.filter(t => `${t.id}` !== id) // in case of different datatypes (string and int)
-            setTasks([...tasks, data])
+            setTasks(newTasks)
         })
     }
     

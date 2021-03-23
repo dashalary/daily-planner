@@ -6,8 +6,16 @@ function Tasks() {
     return (
         <MyContext.Consumer>
         {context => {
-            console.log("Rendering")
-            const tasks = context.tasks.map(task => <li key={task.id}>{task.description} - {task.complete ? "Completed" : "Not completed"}</li>);
+            // console.log("Rendering")
+
+            const handleClick = (e) => {
+                context.deleteTask(e.target.id)
+            }
+
+            const tasks = context.tasks.map(task => <li key={task.id}>{task.description} - {task.complete ? "Completed" : "Not completed"}
+            <button id={task.id} onClick={handleClick}>Delete</button>
+            </li>);
+            
             return (
                 <div className="App">
                     <h1>Create a Task</h1>
