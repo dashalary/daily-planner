@@ -31,6 +31,7 @@ function MyProvider(props) {
         })
         .then(res => res.json())
         .then(data => {
+            const newTasks = tasks.filter(t => `${t.id}` !== id) // in case of different datatypes (string and int)
             setTasks([...tasks, data])
         })
     }  
