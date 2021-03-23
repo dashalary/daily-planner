@@ -22,9 +22,12 @@ function TaskForm() {
                 <form onSubmit={handleOnSubmit}>
                 <input
                 type="text"
+                placeholder="Water plants"
                 value={description}
                 onChange={handleOnChange} />
                 <button type="submit">Add Task</button>
+                <br></br>
+                <br></br>
                 </form>
             )
         }}
