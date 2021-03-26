@@ -13,17 +13,15 @@ function Tasks() {
             }
 
             const tasks = context.tasks.map(task => <li key={task.id}>{task.description} - {task.complete ? "Completed  -   " : "Not completed  -   "}
-            <button id={task.id} onClick={handleClick}>Delete</button>
+            <button id={task.id} onClick={handleClick} className="ui button">Delete</button>
             </li>);
 
             return (
                 <div className="App">
                     <h1>Create a Task</h1>
-                    <br></br>
                     <TaskForm />
                     <hr />
                     <h1>Today's Tasks</h1>
-                    <br></br>
                     <ul>
                     {tasks}
                     </ul>

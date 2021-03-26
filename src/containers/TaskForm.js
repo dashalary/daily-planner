@@ -25,7 +25,7 @@ function TaskForm() {
                 placeholder="Water plants"
                 value={description}
                 onChange={handleOnChange} />
-                <button type="submit">Add Task</button>
+                <button type="submit" className="ui button">Add Task</button>
                 <br></br>
                 <br></br>
                 </form>
