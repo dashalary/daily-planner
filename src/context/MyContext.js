@@ -49,8 +49,8 @@ function MyProvider(props) {
         })
     }
 
-    // now we need a PUT request to be able to change complete/uncomplete attribute 
-    
+    /* now we need a PUT request to be able to change complete/uncomplete attribute */
+
     
     return <MyContext.Provider value={{
             tasks: tasks,
