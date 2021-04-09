@@ -18,10 +18,10 @@ function Tasks() {
 
             return (
                 <div className="App">
-                    <h1>Create a Task</h1>
+                    <h2>Create a Task</h2>
                     <TaskForm />
                     <hr />
-                    <h1>Today's Tasks</h1>
+                    <h2>Today's Tasks</h2>
                     <ul>
                     {tasks}
                     </ul>
