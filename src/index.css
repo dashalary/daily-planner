@@ -22,4 +22,5 @@ h2 {
 
 ul {
   color: white;
+  list-style-position: inside;
 }

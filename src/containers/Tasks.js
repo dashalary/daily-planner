@@ -12,7 +12,7 @@ function Tasks() {
                 context.deleteTask(e.target.id)
             }
 
-            const tasks = context.tasks.map(task => <li key={task.id}>{task.description} - {task.complete ? "Completed  -   " : "Not completed  -   "}
+            const tasks = context.tasks.map(task => <li key={task.id}><b>{task.description}</b> - {task.complete ? "Completed  -   " : "Not completed  -   "}
             <button id={task.id} onClick={handleClick} className="ui button">Delete</button>
             </li>);
 
